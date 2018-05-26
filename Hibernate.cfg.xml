@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+    <property name="connection.url">jdbc:sqlserver://127.0.0.1:59154</property>
+    <property name="connection.username">username</property>
+    <property name="connection.password">password</property>
+    <property name="connection.pool_size">100</property>
+    <property name= "cache.provider_class">
+		org.hibernate.cache.NoCacheProvider
+    </property>
+      <property name="dialect">org.hibernate.dialect.SQLServerDialect</property>
+      <property name="show_sql">true</property>
+      <property name="hbm2ddl.auto">update</property>
+      <mapping class="Javapr.EXPERIENCE"/>
+      <mapping class="Javapr.PERSON"/>
+      <mapping class="Javapr.PAYMENT"/>
+      <mapping class="Javapr.PROJECT_STUFF"/>
+      <mapping class="Javapr.POSITION"/>
+      <mapping class="Javapr.SALARY"/>
+      <mapping class="Javapr.PROJECT"/>
+      <mapping class="Javapr.CAREER"/>
+      <mapping class="Javapr.PROJECT_FUNCTION"/>
+  </session-factory>
+</hibernate-configuration>
